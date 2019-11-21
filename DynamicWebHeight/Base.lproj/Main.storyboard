@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DynamicWebHeight" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IBQ-UV-rQn">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e7L-O9-r3x">
+                                <rect key="frame" x="0.0" y="862" width="414" height="75"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Igh-Vz-x99">
+                                        <rect key="frame" x="41.5" y="11.5" width="331" height="52.5"/>
+                                        <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Igh-Vz-x99" firstAttribute="height" secondItem="e7L-O9-r3x" secondAttribute="height" multiplier="0.7" id="2wG-7r-hML"/>
+                                    <constraint firstItem="Igh-Vz-x99" firstAttribute="centerX" secondItem="e7L-O9-r3x" secondAttribute="centerX" id="CMx-Tn-HHg"/>
+                                    <constraint firstItem="Igh-Vz-x99" firstAttribute="centerY" secondItem="e7L-O9-r3x" secondAttribute="centerY" id="UIM-fu-WPu"/>
+                                    <constraint firstItem="Igh-Vz-x99" firstAttribute="width" secondItem="e7L-O9-r3x" secondAttribute="width" multiplier="0.8" id="ir6-gb-DT5"/>
+                                    <constraint firstAttribute="height" constant="75" id="oaL-r7-buQ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="e7L-O9-r3x" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="75" id="1dA-x5-tsB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="e7L-O9-r3x" secondAttribute="trailing" id="P9h-XM-XKi"/>
+                            <constraint firstItem="IBQ-UV-rQn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Sz2-8n-T7K"/>
+                            <constraint firstItem="IBQ-UV-rQn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="VeO-k4-bma"/>
+                            <constraint firstItem="e7L-O9-r3x" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="br4-pT-IZY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IBQ-UV-rQn" secondAttribute="trailing" id="kFs-Se-z5g"/>
+                            <constraint firstItem="e7L-O9-r3x" firstAttribute="top" secondItem="IBQ-UV-rQn" secondAttribute="bottom" id="tEM-W4-rr1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="bottomEdge" destination="1dA-x5-tsB" id="2QD-GO-zpU"/>
+                        <outlet property="buttonContainer" destination="e7L-O9-r3x" id="Mpu-0S-39w"/>
+                        <outlet property="webView" destination="IBQ-UV-rQn" id="Npv-5Z-ewE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="85.507246376811594" y="65.625"/>
+        </scene>
+    </scenes>
+</document>
